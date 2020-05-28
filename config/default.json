@@ -1,0 +1,5 @@
+{
+  "port": 5000,
+  "jwtSecret": "mern youtube",
+  "mongoUri": "mongodb+srv://xrust:xrust@cluster0-g6g9c.azure.mongodb.net/app?retryWrites=true&w=majority"
+}
