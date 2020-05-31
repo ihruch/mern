@@ -6,6 +6,10 @@ const app = express();
 app.use(express.json({extended: true}));
 
 app.use('/api/auth', require('./routes/auth.routes'));
+<<<<<<< HEAD
+=======
+app.use('/link', require('./routes/link.routes'))
+>>>>>>> add router link back
 
 const PORT = config.get('port') || 5000;
 
