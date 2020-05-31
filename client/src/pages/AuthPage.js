@@ -16,12 +16,7 @@ export const AuthPage = () => {
         cleatError();
     }, [error, message, cleatError])
 
-<<<<<<< HEAD
-
-    const changeHandler = event => {
-=======
      const changeHandler = event => {
->>>>>>> add router link back
         const { target: {name, value}} = event;
         setForm({...form, [name]: value});
     }
