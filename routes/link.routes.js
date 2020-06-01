@@ -6,11 +6,12 @@ const config = require('config');
 const shortid = require('shortid');
 
 
-
 router.post('/generate', authMiddleware,  async (req, res) => {
   try {
         const baseUrl = config.get('baseUrl');
         const { from } = req.body;
+
+        console.log('/generate')
 
         const code = shortid.generate();
         const existing = await  Link.findOne({ from });
@@ -39,6 +40,7 @@ router.get('/', authMiddleware, async (req, res) => {
       res.status(500).json({message: "Что-то пошло не так!"})
   }
 });
+
 
 router.get('/:id', authMiddleware, async (req, res) => {
   try {

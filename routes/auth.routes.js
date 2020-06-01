@@ -85,7 +85,7 @@ router.post(
                 {expiresIn: '10h'}
                 )
 
-            res.json({ token: token, userId: user.id}) // ответ удачно залогинились
+            res.json({ userId: user.id,  token: token }) // ответ удачно залогинились
 
         } catch (e) {
             res.status(500).json({message: 'Something wrong. Try again.'})
