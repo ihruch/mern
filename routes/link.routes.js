@@ -11,8 +11,6 @@ router.post('/generate', authMiddleware,  async (req, res) => {
         const baseUrl = config.get('baseUrl');
         const { from } = req.body;
 
-        console.log('/generate')
-
         const code = shortid.generate();
         const existing = await  Link.findOne({ from });
 
